@@ -1,14 +1,13 @@
-<?php
+<?php declare(strict_types=1);
 
 class Figure {
-    protected $isBlack;
+    protected bool $isBlack;
 
-    public function __construct($isBlack) {
+    public function __construct(bool $isBlack) {
         $this->isBlack = $isBlack;
     }
 
-    /** @noinspection PhpToStringReturnInspection */
-    public function __toString() {
-        throw new \Exception("Not implemented");
+    public function __toString(): string {
+        throw new RuntimeException("Not implemented");
     }
 }

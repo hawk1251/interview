@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -13,7 +13,7 @@ try {
     }
 
     $board->dump();
-} catch (\Exception $e) {
+} catch (Exception $e) {
     echo $e->getMessage() . "\n";
     exit(1);
 }
